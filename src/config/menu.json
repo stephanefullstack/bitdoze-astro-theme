@@ -1,15 +1,15 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Acceuil",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "A propos",
       "url": "/about/"
     },
     {
-      "name": "Series",
+      "name": "Tutoriels",
       "url": "/series/"
     },
 
@@ -19,7 +19,7 @@
       "hasChildren": true,
       "children": [
         {
-          "name": "Authors",
+          "name": "Auteurs",
           "url": "/authors/"
         },
         {
@@ -31,11 +31,11 @@
           "url": "/tags/"
         },
         {
-          "name": "About",
+          "name": "A propos",
           "url": "/about/"
         },
         {
-          "name": "Privacy Policy",
+          "name": "Mentions légales",
           "url": "/privacy/"
         }
       ]
@@ -48,7 +48,7 @@
   ],
   "footer": [
     {
-      "name": "About",
+      "name": "A propos",
       "url": "/about/"
     },
     {
@@ -56,7 +56,7 @@
       "url": "/contact/"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Mentions légales",
       "url": "/privacy/"
     }
   ]

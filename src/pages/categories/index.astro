@@ -12,10 +12,10 @@ const posts = await getCollection('posts', ({ data }) => {
 // Get all unique categories and count posts for each
 const categories = [...new Set(posts.flatMap(post => post.data.categories || []))];
 const categoryCounts = categories.map(category => {
-  const count = posts.filter(post => 
+  const count = posts.filter(post =>
     post.data.categories && post.data.categories.includes(category)
   ).length;
-  
+
   return {
     name: category,
     count,
@@ -24,7 +24,7 @@ const categoryCounts = categories.map(category => {
 }).sort((a, b) => b.count - a.count); // Sort by post count (descending)
 ---
 
-<Layout 
+<Layout
   title={`Categories - ${siteConfig.title}`}
   description="Browse all categories of posts on our blog"
 >
@@ -34,13 +34,13 @@ const categoryCounts = categories.map(category => {
         Categories
       </h1>
       <p class="text-lg text-gray-700 dark:text-gray-300">
-        Browse posts by category
+        Explore les articles par catégorie
       </p>
     </header>
-    
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {categoryCounts.map(({ name, count, slug }) => (
-        <a 
+        <a
           href={`/categories/${slug}/`}
           class="flex items-center justify-between p-5 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700"
         >
@@ -56,10 +56,10 @@ const categoryCounts = categories.map(category => {
         </a>
       ))}
     </div>
-    
+
     {categoryCounts.length === 0 && (
       <div class="text-center py-12">
-        <p class="text-gray-600 dark:text-gray-400">No categories found.</p>
+        <p class="text-gray-600 dark:text-gray-400">Aucune categorie trouvée.</p>
       </div>
     )}
   </div>
